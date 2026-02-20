@@ -17,7 +17,17 @@ export const logMessage = (message: AIMessage) => {
   const role  = message.role
   const color = roleColors[role as keyof typeof roleColors] || '\x1b[37m'
 
-  if (role === 'tool') return
+  if (role === 'tool') {
+    // If the tool response looks like a DALL-E image URL, print it visibly
+    const content = (message as any).content as string
+    if (typeof content === 'string' && content.startsWith('https://') && content.includes('blob.core.windows.net')) {
+      const yellow = '\x1b[33m'
+      console.log(`\n${yellow}[IMAGE GENERATED]${reset}`)
+      console.log(`${yellow}🖼️  Open this URL in your browser (expires in ~1 hour):${reset}`)
+      console.log(`${content}\n`)
+    }
+    return
+  }
 
   if (role === 'user') {
     console.log(`\n${color}[USER]${reset}`)
