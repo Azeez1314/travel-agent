@@ -1,5 +1,10 @@
 # Agent for Travel — AI Travel Planner
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?logo=node.js)](https://nodejs.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+
 An agentic AI travel planner powered by OpenAI's GPT-4o-mini. Given a natural language request, it autonomously searches for flights, hotels, restaurants, attractions, and distances — then delivers a full day-by-day itinerary.
 
 ---
@@ -57,4 +62,27 @@ agent-for-travel/
 
 ## Quickstart
 
-See [QUICKSTART.md](./QUICKSTART.md) for setup and usage instructions.
+See [QUICKSTART.md](./QUICKSTART.md) for full setup and usage instructions.
+
+**TL;DR:**
+
+```bash
+npm install
+cp .env.example .env   # add your OPENAI_API_KEY
+npx tsx index.ts "Plan me a 5-day trip to Tokyo on a $2000 budget, departing from New York (JFK) on 2025-06-01, returning 2025-06-06"
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) to get started.
+
+- Found a bug? [Open an issue](https://github.com/wikimasters/agent-for-travel/issues)
+- Want to add a feature? [Submit a pull request](https://github.com/wikimasters/agent-for-travel/pulls)
+
+---
+
+## License
+
+[MIT](./LICENSE) — free to use, modify, and distribute.

@@ -1,7 +1,23 @@
 {
-  "name": "agent-for-news",
+  "name": "agent-for-travel",
+  "version": "1.0.0",
+  "description": "An agentic AI travel planner powered by OpenAI GPT-4o-mini that autonomously searches flights, hotels, restaurants, and attractions.",
   "module": "index.ts",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wikimasters/agent-for-travel.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "travel",
+    "openai",
+    "gpt",
+    "itinerary",
+    "typescript"
+  ],
   "scripts": {
     "start": "npx tsx index.ts"
   },
